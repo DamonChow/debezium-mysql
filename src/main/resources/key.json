@@ -1,0 +1,29 @@
+{
+  "schema": {
+    "type": "struct",
+    "fields": [
+      {
+        "type": "int32",
+        "optional": false,
+        "field": "id"
+      },
+      {
+        "type": "int64",
+        "optional": false,
+        "field": "bigint_id"
+      },
+      {
+        "type": "string",
+        "optional": false,
+        "field": "var_name"
+      }
+    ],
+    "optional": false,
+    "name": "dbserver1.inventory_back.demo.Key"
+  },
+  "payload": {
+    "id": 2,
+    "bigint_id": 3,
+    "var_name": "4"
+  }
+}

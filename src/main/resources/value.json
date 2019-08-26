@@ -1,0 +1,796 @@
+{
+  "schema": {
+    "type": "struct",
+    "fields": [
+      {
+        "type": "struct",
+        "fields": [
+          {
+            "type": "int32",
+            "optional": false,
+            "field": "id"
+          },
+          {
+            "type": "int64",
+            "optional": false,
+            "field": "bigint_id"
+          },
+          {
+            "type": "string",
+            "optional": false,
+            "field": "var_name"
+          },
+          {
+            "type": "int16",
+            "optional": true,
+            "field": "ex_tinyint"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "field": "ex_char"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "name": "io.debezium.data.Json",
+            "version": 1,
+            "field": "ex_json"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "field": "ex_text"
+          },
+          {
+            "type": "int32",
+            "optional": true,
+            "name": "io.debezium.time.Year",
+            "version": 1,
+            "field": "ex_year"
+          },
+          {
+            "type": "int64",
+            "optional": true,
+            "name": "io.debezium.time.MicroTime",
+            "version": 1,
+            "field": "ex_time"
+          },
+          {
+            "type": "int32",
+            "optional": true,
+            "name": "io.debezium.time.Date",
+            "version": 1,
+            "field": "ex_date"
+          },
+          {
+            "type": "int64",
+            "optional": true,
+            "name": "io.debezium.time.Timestamp",
+            "version": 1,
+            "field": "ex_datetime"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "name": "io.debezium.time.ZonedTimestamp",
+            "version": 1,
+            "field": "ex_timestamp"
+          },
+          {
+            "type": "bytes",
+            "optional": true,
+            "field": "ex_blob"
+          },
+          {
+            "type": "bytes",
+            "optional": true,
+            "field": "ex_tinyblob"
+          },
+          {
+            "type": "bytes",
+            "optional": true,
+            "field": "ex_binary"
+          },
+          {
+            "type": "double",
+            "optional": true,
+            "field": "ex_double"
+          },
+          {
+            "type": "double",
+            "optional": true,
+            "field": "ex_float"
+          },
+          {
+            "type": "bytes",
+            "optional": true,
+            "name": "org.apache.kafka.connect.data.Decimal",
+            "version": 1,
+            "parameters": {
+              "scale": "2",
+              "connect.decimal.precision": "10"
+            },
+            "field": "ex_decimal"
+          },
+          {
+            "type": "bytes",
+            "optional": true,
+            "name": "org.apache.kafka.connect.data.Decimal",
+            "version": 1,
+            "parameters": {
+              "scale": "4",
+              "connect.decimal.precision": "10"
+            },
+            "field": "ex_numeric"
+          },
+          {
+            "type": "float",
+            "optional": true,
+            "field": "ex_real"
+          },
+          {
+            "type": "boolean",
+            "optional": true,
+            "field": "ex_bit"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "name": "io.debezium.data.Enum",
+            "version": 1,
+            "parameters": {
+              "allowed": "123,22"
+            },
+            "default": "123",
+            "field": "ex_enum"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "name": "io.debezium.data.EnumSet",
+            "version": 1,
+            "parameters": {
+              "allowed": "a,b,c,d"
+            },
+            "field": "ex_set"
+          },
+          {
+            "type": "struct",
+            "fields": [
+              {
+                "type": "bytes",
+                "optional": false,
+                "field": "wkb"
+              },
+              {
+                "type": "int32",
+                "optional": true,
+                "field": "srid"
+              }
+            ],
+            "optional": true,
+            "name": "io.debezium.data.geometry.Geometry",
+            "version": 1,
+            "doc": "Geometry",
+            "field": "ex_geometry"
+          },
+          {
+            "type": "struct",
+            "fields": [
+              {
+                "type": "double",
+                "optional": false,
+                "field": "x"
+              },
+              {
+                "type": "double",
+                "optional": false,
+                "field": "y"
+              },
+              {
+                "type": "bytes",
+                "optional": true,
+                "field": "wkb"
+              },
+              {
+                "type": "int32",
+                "optional": true,
+                "field": "srid"
+              }
+            ],
+            "optional": true,
+            "name": "io.debezium.data.geometry.Point",
+            "version": 1,
+            "doc": "Geometry (POINT)",
+            "field": "ex_point"
+          },
+          {
+            "type": "struct",
+            "fields": [
+              {
+                "type": "bytes",
+                "optional": false,
+                "field": "wkb"
+              },
+              {
+                "type": "int32",
+                "optional": true,
+                "field": "srid"
+              }
+            ],
+            "optional": true,
+            "name": "io.debezium.data.geometry.Geometry",
+            "version": 1,
+            "doc": "Geometry",
+            "field": "ex_linestring"
+          },
+          {
+            "type": "struct",
+            "fields": [
+              {
+                "type": "bytes",
+                "optional": false,
+                "field": "wkb"
+              },
+              {
+                "type": "int32",
+                "optional": true,
+                "field": "srid"
+              }
+            ],
+            "optional": true,
+            "name": "io.debezium.data.geometry.Geometry",
+            "version": 1,
+            "doc": "Geometry",
+            "field": "ex_polygon"
+          },
+          {
+            "type": "struct",
+            "fields": [
+              {
+                "type": "bytes",
+                "optional": false,
+                "field": "wkb"
+              },
+              {
+                "type": "int32",
+                "optional": true,
+                "field": "srid"
+              }
+            ],
+            "optional": true,
+            "name": "io.debezium.data.geometry.Geometry",
+            "version": 1,
+            "doc": "Geometry",
+            "field": "ex_geometrycollection"
+          },
+          {
+            "type": "struct",
+            "fields": [
+              {
+                "type": "bytes",
+                "optional": false,
+                "field": "wkb"
+              },
+              {
+                "type": "int32",
+                "optional": true,
+                "field": "srid"
+              }
+            ],
+            "optional": true,
+            "name": "io.debezium.data.geometry.Geometry",
+            "version": 1,
+            "doc": "Geometry",
+            "field": "ex_multipoint"
+          }
+        ],
+        "optional": true,
+        "name": "dbserver1.inventory.demo.Value",
+        "field": "before"
+      },
+      {
+        "type": "struct",
+        "fields": [
+          {
+            "type": "int32",
+            "optional": false,
+            "field": "id"
+          },
+          {
+            "type": "int64",
+            "optional": false,
+            "field": "bigint_id"
+          },
+          {
+            "type": "string",
+            "optional": false,
+            "field": "var_name"
+          },
+          {
+            "type": "int16",
+            "optional": true,
+            "field": "ex_tinyint"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "field": "ex_char"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "name": "io.debezium.data.Json",
+            "version": 1,
+            "field": "ex_json"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "field": "ex_text"
+          },
+          {
+            "type": "int32",
+            "optional": true,
+            "name": "io.debezium.time.Year",
+            "version": 1,
+            "field": "ex_year"
+          },
+          {
+            "type": "int64",
+            "optional": true,
+            "name": "io.debezium.time.MicroTime",
+            "version": 1,
+            "field": "ex_time"
+          },
+          {
+            "type": "int32",
+            "optional": true,
+            "name": "io.debezium.time.Date",
+            "version": 1,
+            "field": "ex_date"
+          },
+          {
+            "type": "int64",
+            "optional": true,
+            "name": "io.debezium.time.Timestamp",
+            "version": 1,
+            "field": "ex_datetime"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "name": "io.debezium.time.ZonedTimestamp",
+            "version": 1,
+            "field": "ex_timestamp"
+          },
+          {
+            "type": "bytes",
+            "optional": true,
+            "field": "ex_blob"
+          },
+          {
+            "type": "bytes",
+            "optional": true,
+            "field": "ex_tinyblob"
+          },
+          {
+            "type": "bytes",
+            "optional": true,
+            "field": "ex_binary"
+          },
+          {
+            "type": "double",
+            "optional": true,
+            "field": "ex_double"
+          },
+          {
+            "type": "double",
+            "optional": true,
+            "field": "ex_float"
+          },
+          {
+            "type": "bytes",
+            "optional": true,
+            "name": "org.apache.kafka.connect.data.Decimal",
+            "version": 1,
+            "parameters": {
+              "scale": "2",
+              "connect.decimal.precision": "10"
+            },
+            "field": "ex_decimal"
+          },
+          {
+            "type": "bytes",
+            "optional": true,
+            "name": "org.apache.kafka.connect.data.Decimal",
+            "version": 1,
+            "parameters": {
+              "scale": "4",
+              "connect.decimal.precision": "10"
+            },
+            "field": "ex_numeric"
+          },
+          {
+            "type": "float",
+            "optional": true,
+            "field": "ex_real"
+          },
+          {
+            "type": "boolean",
+            "optional": true,
+            "field": "ex_bit"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "name": "io.debezium.data.Enum",
+            "version": 1,
+            "parameters": {
+              "allowed": "123,22"
+            },
+            "default": "123",
+            "field": "ex_enum"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "name": "io.debezium.data.EnumSet",
+            "version": 1,
+            "parameters": {
+              "allowed": "a,b,c,d"
+            },
+            "field": "ex_set"
+          },
+          {
+            "type": "struct",
+            "fields": [
+              {
+                "type": "bytes",
+                "optional": false,
+                "field": "wkb"
+              },
+              {
+                "type": "int32",
+                "optional": true,
+                "field": "srid"
+              }
+            ],
+            "optional": true,
+            "name": "io.debezium.data.geometry.Geometry",
+            "version": 1,
+            "doc": "Geometry",
+            "field": "ex_geometry"
+          },
+          {
+            "type": "struct",
+            "fields": [
+              {
+                "type": "double",
+                "optional": false,
+                "field": "x"
+              },
+              {
+                "type": "double",
+                "optional": false,
+                "field": "y"
+              },
+              {
+                "type": "bytes",
+                "optional": true,
+                "field": "wkb"
+              },
+              {
+                "type": "int32",
+                "optional": true,
+                "field": "srid"
+              }
+            ],
+            "optional": true,
+            "name": "io.debezium.data.geometry.Point",
+            "version": 1,
+            "doc": "Geometry (POINT)",
+            "field": "ex_point"
+          },
+          {
+            "type": "struct",
+            "fields": [
+              {
+                "type": "bytes",
+                "optional": false,
+                "field": "wkb"
+              },
+              {
+                "type": "int32",
+                "optional": true,
+                "field": "srid"
+              }
+            ],
+            "optional": true,
+            "name": "io.debezium.data.geometry.Geometry",
+            "version": 1,
+            "doc": "Geometry",
+            "field": "ex_linestring"
+          },
+          {
+            "type": "struct",
+            "fields": [
+              {
+                "type": "bytes",
+                "optional": false,
+                "field": "wkb"
+              },
+              {
+                "type": "int32",
+                "optional": true,
+                "field": "srid"
+              }
+            ],
+            "optional": true,
+            "name": "io.debezium.data.geometry.Geometry",
+            "version": 1,
+            "doc": "Geometry",
+            "field": "ex_polygon"
+          },
+          {
+            "type": "struct",
+            "fields": [
+              {
+                "type": "bytes",
+                "optional": false,
+                "field": "wkb"
+              },
+              {
+                "type": "int32",
+                "optional": true,
+                "field": "srid"
+              }
+            ],
+            "optional": true,
+            "name": "io.debezium.data.geometry.Geometry",
+            "version": 1,
+            "doc": "Geometry",
+            "field": "ex_geometrycollection"
+          },
+          {
+            "type": "struct",
+            "fields": [
+              {
+                "type": "bytes",
+                "optional": false,
+                "field": "wkb"
+              },
+              {
+                "type": "int32",
+                "optional": true,
+                "field": "srid"
+              }
+            ],
+            "optional": true,
+            "name": "io.debezium.data.geometry.Geometry",
+            "version": 1,
+            "doc": "Geometry",
+            "field": "ex_multipoint"
+          }
+        ],
+        "optional": true,
+        "name": "dbserver1.inventory.demo.Value",
+        "field": "after"
+      },
+      {
+        "type": "struct",
+        "fields": [
+          {
+            "type": "string",
+            "optional": true,
+            "field": "version"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "field": "connector"
+          },
+          {
+            "type": "string",
+            "optional": false,
+            "field": "name"
+          },
+          {
+            "type": "int64",
+            "optional": false,
+            "field": "server_id"
+          },
+          {
+            "type": "int64",
+            "optional": false,
+            "field": "ts_sec"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "field": "gtid"
+          },
+          {
+            "type": "string",
+            "optional": false,
+            "field": "file"
+          },
+          {
+            "type": "int64",
+            "optional": false,
+            "field": "pos"
+          },
+          {
+            "type": "int32",
+            "optional": false,
+            "field": "row"
+          },
+          {
+            "type": "boolean",
+            "optional": true,
+            "default": false,
+            "field": "snapshot"
+          },
+          {
+            "type": "int64",
+            "optional": true,
+            "field": "thread"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "field": "db"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "field": "table"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "field": "query"
+          }
+        ],
+        "optional": false,
+        "name": "io.debezium.connector.mysql.Source",
+        "field": "source"
+      },
+      {
+        "type": "string",
+        "optional": false,
+        "field": "op"
+      },
+      {
+        "type": "int64",
+        "optional": true,
+        "field": "ts_ms"
+      }
+    ],
+    "optional": false,
+    "name": "dbserver1.inventory.demo.Envelope"
+  },
+  "payload": {
+    "before": {
+      "id": 2,
+      "bigint_id": 3,
+      "var_name": "4",
+      "ex_tinyint": 1,
+      "ex_char": "1",
+      "ex_json": "{\"abc\":123}",
+      "ex_text": "1",
+      "ex_year": 2019,
+      "ex_time": 58380000000,
+      "ex_date": 18008,
+      "ex_datetime": 1555949586000,
+      "ex_timestamp": "2019-04-22T16:13:08Z",
+      "ex_blob": "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",
+      "ex_tinyblob": "MTIz",
+      "ex_binary": null,
+      "ex_double": 45678.54,
+      "ex_float": 12.329999923706055,
+      "ex_decimal": "CSg=",
+      "ex_numeric": "BRqk",
+      "ex_real": 12.32,
+      "ex_bit": true,
+      "ex_enum": "123",
+      "ex_set": "c,d",
+      "ex_geometry": {
+        "wkb": "AQEAAADAdjBin39eQKjEdYwr/j9A",
+        "srid": null
+      },
+      "ex_point": {
+        "x": 15.123,
+        "y": 210.0,
+        "wkb": "AQEAAADl0CLb+T4uQAAAAAAAQGpA",
+        "srid": null
+      },
+      "ex_linestring": {
+        "wkb": "AQIAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACRAAAAAAAAAJEAAAAAAAAA0QAAAAAAAADlAAAAAAAAASUAAAAAAAABOQA==",
+        "srid": null
+      },
+      "ex_polygon": {
+        "wkb": "AQMAAAACAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkQAAAAAAAAAAAAAAAAAAAJEAAAAAAAAAkQAAAAAAAAAAAAAAAAAAAJEAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAABRAAAAAAAAAFEAAAAAAAAAcQAAAAAAAABRAAAAAAAAAHEAAAAAAAAAcQAAAAAAAABRAAAAAAAAAHEAAAAAAAAAUQAAAAAAAABRA",
+        "srid": null
+      },
+      "ex_geometrycollection": {
+        "wkb": "AQcAAAADAAAAAQEAAAAAAAAAAAAkQAAAAAAAACRAAQEAAAAAAAAAAAA+QAAAAAAAAD5AAQIAAAACAAAAAAAAAAAALkAAAAAAAAAuQAAAAAAAADRAAAAAAAAANEA=",
+        "srid": null
+      },
+      "ex_multipoint": {
+        "wkb": "AQQAAAADAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAAAAA0QAAAAAAAADRAAQEAAAAAAAAAAABOQAAAAAAAAE5A",
+        "srid": null
+      }
+    },
+    "after": {
+      "id": 2,
+      "bigint_id": 3,
+      "var_name": "4",
+      "ex_tinyint": 1,
+      "ex_char": "1",
+      "ex_json": "{\"abc\":123}",
+      "ex_text": "12",
+      "ex_year": 2019,
+      "ex_time": 58380000000,
+      "ex_date": 18008,
+      "ex_datetime": 1555949586000,
+      "ex_timestamp": "2019-04-22T16:13:08Z",
+      "ex_blob": "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",
+      "ex_tinyblob": "MTIz",
+      "ex_binary": null,
+      "ex_double": 45678.54,
+      "ex_float": 12.329999923706055,
+      "ex_decimal": "CSg=",
+      "ex_numeric": "BRqk",
+      "ex_real": 12.32,
+      "ex_bit": true,
+      "ex_enum": "123",
+      "ex_set": "c,d",
+      "ex_geometry": {
+        "wkb": "AQEAAADAdjBin39eQKjEdYwr/j9A",
+        "srid": null
+      },
+      "ex_point": {
+        "x": 15.123,
+        "y": 210.0,
+        "wkb": "AQEAAADl0CLb+T4uQAAAAAAAQGpA",
+        "srid": null
+      },
+      "ex_linestring": {
+        "wkb": "AQIAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACRAAAAAAAAAJEAAAAAAAAA0QAAAAAAAADlAAAAAAAAASUAAAAAAAABOQA==",
+        "srid": null
+      },
+      "ex_polygon": {
+        "wkb": "AQMAAAACAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkQAAAAAAAAAAAAAAAAAAAJEAAAAAAAAAkQAAAAAAAAAAAAAAAAAAAJEAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAABRAAAAAAAAAFEAAAAAAAAAcQAAAAAAAABRAAAAAAAAAHEAAAAAAAAAcQAAAAAAAABRAAAAAAAAAHEAAAAAAAAAUQAAAAAAAABRA",
+        "srid": null
+      },
+      "ex_geometrycollection": {
+        "wkb": "AQcAAAADAAAAAQEAAAAAAAAAAAAkQAAAAAAAACRAAQEAAAAAAAAAAAA+QAAAAAAAAD5AAQIAAAACAAAAAAAAAAAALkAAAAAAAAAuQAAAAAAAADRAAAAAAAAANEA=",
+        "srid": null
+      },
+      "ex_multipoint": {
+        "wkb": "AQQAAAADAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAAAAA0QAAAAAAAADRAAQEAAAAAAAAAAABOQAAAAAAAAE5A",
+        "srid": null
+      }
+    },
+    "source": {
+      "version": "0.9.3.Final",
+      "connector": "mysql",
+      "name": "dbserver1",
+      "server_id": 223344,
+      "ts_sec": 1556077680,
+      "gtid": null,
+      "file": "mysql-bin.000004",
+      "pos": 1635184,
+      "row": 0,
+      "snapshot": false,
+      "thread": 116,
+      "db": "inventory",
+      "table": "demo",
+      "query": null
+    },
+    "op": "u",
+    "ts_ms": 1556077991627
+  }
+}

@@ -1,0 +1,10 @@
+bin/kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic dbserver1.inventory.demo --from-beginning
+
+bin/kafka-avro-console-consumer --bootstrap-server localhost:9092  --topic dbserver1.inventory.demo --from-beginning
+
+bin/kafka-topics --bootstrap-server 127.0.0.1:9092 --delete --topic  dbserver1.inventory.user
+
+curl -i -X POST -H "Accept:application/json" -H "Content-Type:application/json" localhost:8083/connectors -d @/Users/damon/IdeaProjects/debezium-mysql-demo/src/main/resources/connector.json
+
+curl -s -X PUT -H "Content-Type:application/json" http://localhost:8083/connectors/inventory-connector/config -d @/Users/damon/IdeaProjects/debezium-mysql-demo/src/main/resources/connector.json
+

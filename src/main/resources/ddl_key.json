@@ -1,0 +1,17 @@
+{
+  "schema": {
+    "type": "struct",
+    "fields": [
+      {
+        "type": "string",
+        "optional": false,
+        "field": "databaseName"
+      }
+    ],
+    "optional": false,
+    "name": "io.debezium.connector.mysql.SchemaChangeKey"
+  },
+  "payload": {
+    "databaseName": "inventory"
+  }
+}

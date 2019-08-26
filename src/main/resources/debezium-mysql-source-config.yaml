@@ -1,0 +1,39 @@
+tenant: "public"
+namespace: "default"
+name: "debezium-kafka-source"
+topicName: "kafka-connect-topic"
+archive: "connectors/pulsar-io-kafka-connect-adaptor-2.3.0.nar"
+
+##autoAck: true
+parallelism: 1
+
+configs:
+  ## sourceTask
+  task.class: "io.debezium.connector.mysql.MySqlConnectorTask"
+
+  ## config for mysql, docker image: debezium/example-mysql:0.8
+  database.hostname: "localhost"
+  database.port: "3306"
+  database.user: "debezium"
+  database.password: "dbz"
+  database.server.id: "184054"
+  database.server.name: "dbserver1"
+  database.whitelist: "inventory"
+
+  database.history: "org.apache.pulsar.io.debezium.PulsarDatabaseHistory"
+  database.history.pulsar.topic: "history-topic"
+  database.history.pulsar.service.url: "pulsar://127.0.0.1:6650"
+
+#  "transforms": "unwrap,changetopic",
+#  "transforms.unwrap.type": "io.debezium.transforms.UnwrapFromEnvelope",
+#  "transforms.changetopic.type":"org.apache.kafka.connect.transforms.RegexRouter",
+#  "transforms.changetopic.regex":"(.*)",
+#  "transforms.changetopic.replacement":"$1-smt"
+
+  ## KEY_CONVERTER_CLASS_CONFIG, VALUE_CONVERTER_CLASS_CONFIG
+  key.converter: "org.apache.kafka.connect.json.JsonConverter"
+  value.converter: "org.apache.kafka.connect.json.JsonConverter"
+  ## PULSAR_SERVICE_URL_CONFIG
+  pulsar.service.url: "pulsar://127.0.0.1:6650"
+  ## OFFSET_STORAGE_TOPIC_CONFIG
+  offset.storage.topic: "offset-topic"

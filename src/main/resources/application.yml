@@ -1,0 +1,44 @@
+server:
+  port: 8099
+
+spring:
+  application:
+    name: data-center
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/inventory_back?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: debe
+    password: 123456
+  jpa:
+    show-sql: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+#    time-zone: UTC
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: debezium-kafka-connector
+      key-deserializer: "io.confluent.kafka.serializers.KafkaAvroDeserializer"
+      value-deserializer: "io.confluent.kafka.serializers.KafkaAvroDeserializer"
+      properties:
+        schema.registry.url: http://localhost:8081
+
+#pulsar:
+#  service-url: pulsar://localhost:6650
+#  consumer:
+#    topic: public/default/dbserver1
+#    topic: persistent://public/default/dbserver1.inventory.products
+#    subscription-name: sub-products
+
+
+logging:
+  level:
+    spirng:
+      jpa:
+        DEBUG
+    io:
+      debezium:
+        transforms: TRACE
+    org:
+      hibernate: DEBUG

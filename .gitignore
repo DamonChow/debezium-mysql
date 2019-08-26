@@ -1,0 +1,14 @@
+.idea
+target
+.DS_Store
+log
+overlays
+.history
+.project
+.settings
+.vscode
+*/**/.factorypath
+*/**/.project
+*/**/.settings
+*/**/.classpath
+!.mvn/wrapper/maven-wrapper.jar
